@@ -1,0 +1,16 @@
+{
+	"loinc" : [
+		{ "code" : "21944-4", "text" : "Lung and leukemia CNS radiation status Cancer"},
+		{ "code" : "59478-8", "text" : "Collaborative staging metastasis at diagnosis - lung involvement Cancer"},
+		{ "code" : "88863-6", "text" : "Lung cancer antibody panel - Serum or Plasma by Immunoassay"},
+		{ "code" : "85904-1", "text" : "Cancer pathology panel - Breast cancer specimen by CAP cancer protocols"},
+		{ "code" : "85332-5", "text" : "Radial position in breast [Angle] in Breast cancer specimen"},
+		{ "code" : "44644-3", "text" : "Deprecated Tubule formation in Breast tumor by CAP cancer protocols"},
+		{ "code" : "44648-4", "text" : "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham"},
+		{ "code" : "44663-3", "text" : "Deprecated T classification in Breast tumor by CAP cancer protocols"},
+		{ "code" : "44666-6", "text" : "Deprecated M stage of distant metastasis in Breast tumor Qualitative by CAP cancer protocols"},
+		{ "code" : "53632-6", "text" : "Breast Cancer Ag 225 [Presence] in Tissue by Immune stain"},
+		{ "code" : "85300-2", "text" : "Mitotic rate [Score] in Breast cancer specimen Qualitative by Nottingham"},
+		{ "code" : "24606-6", "text" : "MG Breast Screenin"}
+	]
+}

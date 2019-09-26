@@ -1,0 +1,28 @@
+{
+	"chromosomes" : [
+		{"code" : "1", "length" : 248956422},
+		{"code" : "2", "length" : 242193529},
+		{"code" : "3", "length" : 198295559},
+		{"code" : "4", "length" : 190214555},
+		{"code" : "5", "length" : 181538259},
+		{"code" : "6", "length" : 170805979},
+		{"code" : "7", "length" : 159345973},
+		{"code" : "8", "length" : 145138636},
+		{"code" : "9", "length" : 138394717},
+		{"code" : "10", "length" :133797422},
+		{"code" : "11", "length" : 135086622},
+		{"code" : "12", "length" : 133275309},
+		{"code" : "13", "length" : 114364328},
+		{"code" : "14", "length" : 107043718},
+		{"code" : "15", "length" : 101991189},
+		{"code" : "16", "length" : 90338345},
+		{"code" : "17", "length" : 83257441},
+		{"code" : "18", "length" : 80373285},
+		{"code" : "19", "length" : 58617616},
+		{"code" : "20", "length" : 64444167},
+		{"code" : "21", "length" : 46709983},
+		{"code" : "22", "length" : 50818468},
+		{"code" : "X", "length" : 156040895},
+		{"code" : "Y", "length" : 57227415}
+	]
+}
