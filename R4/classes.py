@@ -81,25 +81,24 @@ class MolecularSequence (Fhir_object):
                 "variant" : self.variant 
                 }
 
-class DiagnosticReport (Diagnostics):
-    result = [{}]
- #   conclusionCode = [{}]
+# class DiagnosticReport (Diagnostics):
+#     result = [{}]
+#  #   conclusionCode = [{}]
 
-    def __init__(self, id, status, code, subject, result):
-        self.result[0] = {"reference" : result}
-        #  self.conclusionCode = conclusionCode
-        super(DiagnosticReport, self).__init__(id, "DiagnosticReport", status, code, subject)
+#     def __init__(self, id, status, code, subject, result):
+#         self.result[0] = {"reference" : result}
+#         #  self.conclusionCode = conclusionCode
+#         super(DiagnosticReport, self).__init__(id, "DiagnosticReport", status, code, subject)
 
-    def as_dict(self):
-        return {
-        #        "id" : self.id,
-                "resourceType" : self.resourceType,
-                "status" : self.status,
-                "code" : self.code,
-                "subject" : self.subject,
-                "result" : self.result
-                }
-
+#     def as_dict(self):
+#         return {
+#         #        "id" : self.id,
+#                 "resourceType" : self.resourceType,
+#                 "status" : self.status,
+#                 "code" : self.code,
+#                 "subject" : self.subject,
+#                 "result" : self.result
+#                 }
 
 class Observation (Diagnostics):
     derivedFrom = {}

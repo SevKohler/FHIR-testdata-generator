@@ -1,0 +1,7 @@
+{
+	"DiagnosticReportCode" :[
+			{ "code" : "11502-2", "text" : "Laboratory report"},
+			{ "code" : "18748-4", "text" : "Diagnostic imaging study"},
+			{ "code" : "58410-2", "text" : "Complete blood count (hemogram) panel - Blood by Automated count"}
+	]
+}

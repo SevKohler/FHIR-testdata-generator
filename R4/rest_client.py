@@ -1,16 +1,20 @@
 # -*- coding: utf-8 -*-
-from randomizer import * 
+from randomizer.randomizer import * 
 import requests
+from generators.diagnostic_report_generator import *
 from handler import *
 
-base_url = "SERVER_URL"
+base_url = "http://localhost:8888/fhir-bridge/fhir/"
 
 def main():
-	for index in range(0,2): # Enter amount
-		post_patient_resource()
-		post_sequence_resource()
-		post_observation_resource()
-		post_diagnosticreport_resource()
+	for index in range(0,1): # Enter amount\
+		diagnostic_report_generator = DiagnosticReportGenerator()
+		
+		post(diagnostic_report_generator.next(2), "DiagnosticReport")
+		# post_patient_resource()
+		# post_sequence_resource()
+		# post_observation_resource()
+		# post_diagnosticreport_resource()
 
 	#Post as BUNDLES !!!! (not yet supported by some FHIR R4 providers)	
 	# post_patient_bundle(20)
@@ -77,11 +81,16 @@ def post_diagnosticreport_resource():
 	print ("______Response DiagnosticReport post:" + str(response))
 	diagnosticreport_id_list_append(response)
 
-def post(data, resource_name=""):
-	header = {'Content-type': 'application/fhir+json; fhirVersion=4.0', 'Accept':'application/fhir+json; fhirVersion=4.0', 'charset' : 'utf-8'}	
-	rsp = requests.post(base_url+resource_name, data=data.encode("utf-8"), headers=header)	
-	return rsp.json()
+# def post(data, resource_name=""):
+# 	header = {'Content-type': 'application/fhir+json; fhirVersion=4.0', 'Accept':'application/fhir+json; fhirVersion=4.0', 'charset' : 'utf-8'}	
+# 	rsp = requests.post(base_url+resource_name, data=data.encode("utf-8"), headers=header)	
+# 	return rsp.json()
 
+def post(data, resource_name=""):	
+	print(json.dumps(data, sort_keys=True, indent=4))
+	header = {'Content-Type': 'application/json'}
+	rsp = requests.post(base_url+resource_name, data=json.dumps(data, sort_keys=True, indent=4), headers=header)	
+	print(json.dumps(rsp.json(), sort_keys=True, indent=4))
 
 
 if __name__ == "__main__":
