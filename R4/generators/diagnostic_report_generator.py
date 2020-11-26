@@ -90,7 +90,7 @@ class LaboratoryReport(Generator):
 
 
 	def next(self):
-		self.diagnostic_report.code = self.__generate_code()
+		self.__generate_code()
 		self.__set_category()
 		self.__set_identifier()
 		self.__set_reference()
@@ -105,13 +105,13 @@ class LaboratoryReport(Generator):
 #	def next_with_observation(self, number_of_obs):
 
 	def __generate_code(self):
-	 	generate_codeable_concept = CodeableConcept()
-	 	coding = Coding()
-	 	coding.system =  "http://loinc.org" 
-	 	coding.display = "Laboratory report"
-	 	coding.code =  "11502-2"
-	 	generate_codeable_concept.coding = [coding]
-	 	return generate_codeable_concept
+		generate_codeable_concept = CodeableConcept()
+		coding = Coding()
+		coding.system =  "http://loinc.org" 
+		coding.display = "Laboratory report"
+		coding.code =  "11502-2"
+		generate_codeable_concept.coding = [coding]
+		self.diagnostic_report.code = generate_codeable_concept
 
 	def __set_category(self):
 		codeableconcept = CodeableConcept()

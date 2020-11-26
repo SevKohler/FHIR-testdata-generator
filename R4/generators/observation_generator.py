@@ -29,6 +29,8 @@ class ObservationLabGenerator(Generator):
 		Generator.set_meta(self, self.url, self.observation)
 		Generator.set_status(self, self.observation)
 		self.__set_identifier()
+		self.__set_category()
+		self.__generate_code()
 		print(self.observation.as_json())
 		return self.observation
 
@@ -47,3 +49,22 @@ class ObservationLabGenerator(Generator):
 		identifier.value = "59826-8_1234567890" # TODO randomize
 		self.observation.identifier = [identifier]
 
+	def __set_category(self):
+		codeableconcept = CodeableConcept()
+		coding_lab = Coding()
+		coding_loinc = Coding()
+		coding_lab.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+		coding_lab.code = "laboratory"
+		coding_loinc.system = "http://loinc.org"
+		coding_loinc.code = "26436-6"
+		codeableconcept.coding = [coding_lab, coding_loinc]
+		self.observation.category = [codeableconcept]
+
+	def __generate_code(self):
+	 	codeable_concept = CodeableConcept()
+	 	coding = Coding()
+	 	coding.system =  "http://loinc.org" 
+	 	coding.display = "Lymphocytes [#/volume] in Blood by Manual count"
+	 	coding.code =  "732-8"
+	 	codeable_concept.coding = [coding]
+	 	self.observation.code = codeable_concept
