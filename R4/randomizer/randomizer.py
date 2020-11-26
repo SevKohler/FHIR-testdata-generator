@@ -154,7 +154,7 @@ class RandomFHIRDates:
 		return self.add_leading_zero(str(randint(1, 29)))
 
 	def random_hour(self):
-		return self.add_leading_zero(str(randint(1, 24)))
+		return self.add_leading_zero(str(randint(0, 23)))
 
 	def random_minute(self):
 		return self.add_leading_zero(str(randint(1, 59)))
@@ -173,6 +173,11 @@ class RandomFHIRDates:
 		if (len(digit)<=1):
 			digit = "0" + digit
 		return digit
+
+
+class RandomServiceRequest():
+	def next(self):
+		return "http://external.fhir.server/{}".format(randint(1,999))
 
 
 class RandomBooleans:

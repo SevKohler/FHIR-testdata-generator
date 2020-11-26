@@ -100,23 +100,23 @@ class MolecularSequence (Fhir_object):
 #                 "result" : self.result
 #                 }
 
-class Observation (Diagnostics):
-    derivedFrom = {}
+# class Observation (Diagnostics):
+#     derivedFrom = {}
 
-    def __init__(self, id, status, code, subject, derivedFrom):
-        self.derivedFrom["reference"] = derivedFrom
-        super(Observation, self).__init__(
-            id, "Observation", status, code, subject)
+#     def __init__(self, id, status, code, subject, derivedFrom):
+#         self.derivedFrom["reference"] = derivedFrom
+#         super(Observation, self).__init__(
+#             id, "Observation", status, code, subject)
 
-    def as_dict(self):
-            return {
-        #        "id" : self.id,
-                "resourceType" : self.resourceType,
-                "status" : self.status,
-                "code" : self.code,
-                "subject" : self.subject,
-                "derivedFrom" : self.derivedFrom
-                }
+#     def as_dict(self):
+#             return {
+#         #        "id" : self.id,
+#                 "resourceType" : self.resourceType,
+#                 "status" : self.status,
+#                 "code" : self.code,
+#                 "subject" : self.subject,
+#                 "derivedFrom" : self.derivedFrom
+#                 }
 
 
 class Bundle():
