@@ -1,5 +1,6 @@
+from fhir.resources.diagnosticreport import DiagnosticReport
 from fhir.resources.meta import Meta
-from randomizer.randomizer import *
+from R4.randomizer.randomizer import *
 
 
 
@@ -7,7 +8,7 @@ from randomizer.randomizer import *
 class Generator:
 
 	def set_meta(self, url, resource):
-		meta = Meta()
+		meta = Meta.construct()
 		meta.profile = [url]
 		resource.meta = meta
 

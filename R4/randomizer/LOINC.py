@@ -1,3 +1,7 @@
+from random import randrange
+
+from R4.randomizer.randomizer import load_json_file
+
 
 class RandomLoinc:
 	def __init__(self):
